@@ -22,7 +22,6 @@ public class ProfissionalAutonomo {
     private String bairro;
     private String cidade;
     private String servicoOfertado;
-    private Date nascimento;
     private Login login;
     private Senha senha;
     private double nota = 0;
@@ -30,7 +29,7 @@ public class ProfissionalAutonomo {
 
 
     public String cadastrarFuncionario(String nome, String sobrenome, String endereco, int numero,
-                                String bairro, String cidade, String servicoOfertado, String nascimento) throws ParseException {
+                                String bairro, String cidade, String servicoOfertado) throws ParseException {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.endereco = endereco;
@@ -38,7 +37,6 @@ public class ProfissionalAutonomo {
         this.bairro = bairro;
         this.cidade = cidade;
         this.servicoOfertado = servicoOfertado;
-        this.nascimento = dataFormatada.parse(nascimento);
 
         login.gerarLogin(nome,sobrenome);
         senha.criarSenha();
@@ -122,13 +120,5 @@ public class ProfissionalAutonomo {
 
     public void setServicoOfertado(String servicoOfertado) {
         this.servicoOfertado = servicoOfertado;
-    }
-
-    public Date getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(String nascimento) throws ParseException {
-        this.nascimento = dataFormatada.parse(nascimento);
     }
 }

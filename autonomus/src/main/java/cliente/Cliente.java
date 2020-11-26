@@ -24,21 +24,19 @@ public class Cliente {
     private int numero;
     private String bairro;
     private String cidade;
-    private Date nascimento;
     private Login login;
     private Senha senha;
     private double nota;
     private int contadorDeNotas = 0;
     private UUID clienteDaDemanda;
 
-    public String cadastrarCliente(String nome, String sobrenome, String endereco, int numero, String bairro, String cidade, String nascimento) throws ParseException {
+    public String cadastrarCliente(String nome, String sobrenome, String endereco, int numero, String bairro, String cidade){
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.endereco = endereco;
         this.numero = numero;
         this.bairro = bairro;
         this.cidade = cidade;
-        this.nascimento = dataFormatada.parse(nascimento);
         this.codigoCliente = UUID.randomUUID();
 
         login.gerarLogin(nome,sobrenome);
@@ -128,11 +126,4 @@ public class Cliente {
         this.cidade = cidade;
     }
 
-    public Date getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(Date nascimento) {
-        this.nascimento = nascimento;
-    }
 }

@@ -22,14 +22,14 @@ public class AutonomusApplication {
     public ProfissionalAutonomo cadastrarProfissional() throws ParseException {
         jose.cadastrarFuncionario("Jose", "Silva", "Rua Um",
 				10, "Buritis", "BH",
-				"Segurança de eventos", "01/01/1990");
+				"Segurança de eventos");
 
         return jose;
     }
 
     public Cliente cadastrarCliente() throws ParseException {
     	maria.cadastrarCliente("Maria", "Souza", "Rua Dois",
-				20, "Estoril", "BH", "02/02/1980"	);
+				20, "Estoril", "BH");
 
     	return maria;
 	}
